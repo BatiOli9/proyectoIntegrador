@@ -5,29 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Gaming</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/5297b1b7bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
-        <div class="logo"><h3 class="header-logo">Full Gaming</h3></div>
-        <input type="text" placeholder="Buscador" class="buscador-header">
-        <i class="fa-solid fa-magnifying-glass" id="lupa-header"></i>
-        <ul class="lista-header">
-            <li class="elemento-lista-header"><a href="https://web.whatsapp.com"><i class="fa-brands fa-whatsapp" id="logo-lista-header"></i></a></li>
-            <li class="elemento-lista-header"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram" id="logo-lista-header"></i></a></li>
-            <li class="elemento-lista-header"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook" id="logo-lista-header"></i></a></li>
-        </ul>
-        <ul class="lista-header">
-            <li class="elemento-lista-header"><a href="#"><i class="fa-regular fa-user" id="logo-lista-header"></i></a></li>
-            <li class="elemento-lista-header"><a href="#"><i class="fa-solid fa-cart-shopping" id="logo-lista-header"></i></i></a></li>
-        </ul>
+        <section class="header-top">
+            <a href=index.html class="logo"><h3 class="header-logo">Full Gaming</h3></a>
+            <ul class="lista-header-1">
+                <li class="elemento-lista-header-1" id="whatsapp"><a href="https://web.whatsapp.com"><i class="fa-brands fa-whatsapp" id="logo-lista-header"></i></a></li>
+                <li class="elemento-lista-header-1"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram" id="logo-lista-header"></i></a></li>
+                <li class="elemento-lista-header-1"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook" id="logo-lista-header"></i></a></li>
+            </ul>
+            <input type="text" placeholder="Buscador" class="buscador-header">
+            <i class="fa-solid fa-magnifying-glass" id="lupa-header"></i>
+            <ul class="lista-header-2">
+                <li class="elemento-lista-header-2"><a href="#"><i class="fa-regular fa-user" id="logo-lista-header"></i></a></li>
+                <li class="elemento-lista-header-2"><a href="#"><i class="fa-solid fa-cart-shopping" id="logo-lista-header"></i></i></a></li>
+            </ul>
+        </section>
+        <section class="header-bottom">
+            <ul class="objetos-header-bottom">
+                <li class="objeto-header-bottom" id="componentes"><a href="componentes.html" class="a-header-bottom">Componentes</a>
+                <ul class="submenu-header" id="#submenu-componentes">
+                    <li class="submenu-header-item"><a href="procesadores.html">Procesadores</a></li>
+                    <li class="submenu-header-item"><a href="ram.html">Memoria RAM</a></li>
+                    <li class="submenu-header-item"><a href="motherboards.html">Motherboards</a></li>
+                    <li class="submenu-header-item"><a href="placas-video.html">Placas de video</a></li>
+                    <li class="submenu-header-item"><a href="ssd.html">Discos SSD</a></li>
+                    <li class="submenu-header-item"><a href="hdd.html">Discos HDD</a></li>
+                    <li class="submenu-header-item"><a href="gabinetes.html">Gabinetes</a></li>
+                    <li class="submenu-header-item"><a href="coolers.html">Coolers</a></li>
+                </ul>
+                </li>
+                <li class="objeto-header-bottom"><a href="perifericos.html" class="a-header-bottom">Perifericos</a>
+                    <ul class="submenu-header">
+                        <li class="submenu-header-item"><a href="teclados.html">Teclados</a></li>
+                        <li class="submenu-header-item"><a href="mouses.html">Mouses</a></li>
+                        <li class="submenu-header-item"><a href="auriculares.html">Auriculares</a></li>
+                        <li class="submenu-header-item"><a href="mousepads.html">Mousepads</a></li>
+                        <li class="submenu-header-item"><a href="sillas.html">Sillas Gamer</a></li>
+                        <li class="submenu-header-item"><a href="joysticks.html">Joysticks</a></li>
+                    </ul>
+                </li>
+                <li class="objeto-header-bottom"><a href="pc-armadas.html" class="a-header-bottom">PC Armadas</a></li>
+                <li class="objeto-header-bottom"><a href="monitores.html" class="a-header-bottom">Monitores</a></li>
+                <li class="objeto-header-bottom"><a href="productos.html" class="a-header-bottom">Todos los productos</a></li>
+            </ul>
+            <div class="hamburguesa-div"><i class="fa-solid fa-bars" id="menu-hamburguesa"></i></div>
+        </section>
+        <section class="banner">
+                <ul>
+                    <li>
+                        <img src="/images/banner-amd-radeon.png">
+                    </li>
+                    <li>
+                        <img src="/images/banner-corsair-elgato.png">
+                    </li>
+                    <li>
+                        <img src="/images/banner-monitor-asus.png">
+                    </li>
+                </ul>
+        </section>
     </header>
     <main class="main">
-
     </main>
     <footer class="footer">
-
+        
     </footer>
 </body>
 </html>
