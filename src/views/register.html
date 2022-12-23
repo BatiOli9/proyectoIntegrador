@@ -7,7 +7,7 @@
     <title>Full Gaming</title>
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/footer.css">
     <script src="https://kit.fontawesome.com/5297b1b7bd.js" crossorigin="anonymous"></script>
 </head>
@@ -57,71 +57,17 @@
             </ul>
             <div class="hamburguesa-div"><i class="fa-solid fa-bars" id="menu-hamburguesa"></i></div>
         </section>
-        <section class="banner">
-                <ul>
-                    <li>
-                        <img src="/images/banner-amd-radeon.png">
-                    </li>
-                    <li>
-                        <img src="/images/banner-corsair-elgato.png">
-                    </li>
-                    <li>
-                        <img src="/images/banner-monitor-asus.png">
-                    </li>
-                </ul>
-        </section>
     </header>
-    <main class="main">
-        <section class="destacados">
-            <h3 class="destacados-title">Destacados:</h3>
-            <section class="productos-destacados">
-                <article class="producto">
-                    <img src="/images/evga-3070.png" class="img-producto">
-                    <h4 class="nombre-producto">Nvidia GeForce RTX 3070 EVGA</h4>
-                    <p class="precio-producto">$150.000</p>
-                    <a href="producto1.html"><i class="fa-solid fa-cart-plus" id="carrito-producto"></i></a>
-                </article>
-                <article class="producto">
-                    <img src="/images/nvme-240gb-WD.png" class="img-producto">
-                    <h4 class="nombre-producto">SSD NVME WD 240GB Green</h4>
-                    <p class="precio-producto">$12.000</p>
-                    <a href="producto2.html"><i class="fa-solid fa-cart-plus" id="carrito-producto"></i></a>
-                </article>
-                <article class="producto">
-                    <img src="/images/auriculares-hs70-corsair.png" class="img-producto">
-                    <h4 class="nombre-producto">Corsair HS70 PRO Black</h4>
-                    <p class="precio-producto">$30.000</p>
-                    <a href="producto3.html"><i class="fa-solid fa-cart-plus" id="carrito-producto"></i></a>
-                </article>
-                <article class="producto">
-                    <img src="/images/monitor-asus-144hz.png" class="img-producto">
-                    <h4 class="nombre-producto">Monitor Asus 144hz Curso 1MS</h4>
-                    <p class="precio-producto">$60.000</p>
-                    <a href="producto4.html"><i class="fa-solid fa-cart-plus" id="carrito-producto"></i></a>
-                </article>
-            </section>
-        </section>
-        <section class="marcas">
-            <h3 class="marcas-title">Marcas Sponsor:</h3>
-            <section class="marcas-sponsor">
-                <article class="marca">
-                    <img src="/images/AMD_Logo.svg.png" class="img-marca">
-                    <button class="boton-marca"><a href="amd.html" class="a-marca">Ver productos AMD</a></button>
-                </article>
-                <article class="marca">
-                    <img src="/images/corsair-logo.png" class="img-marca">
-                    <button class="boton-marca"><a href="corsair.html" class="a-marca">Ver productos Corsair</a></button>
-                </article>
-                <article class="marca">
-                    <img src="/images/logitech-logo.png" class="img-marca">
-                    <button class="boton-marca"><a href="logitech.html" class="a-marca">Ver productos Logitech</a></button>
-                </article>
-                <article class="marca">
-                    <img src="/images/nvidia-logo.png" class="img-marca">
-                    <button class="boton-marca"><a href="nvidia.html" class="a-marca">Ver productos Nvidia</a></button>
-                </article>
-            </section>
-        </section>
+    <main class="main-login">
+        <h3 class="login-title">Crear Cuenta:</h3>
+        <form action="login.html" method="POST">
+            <input type="email" placeholder="Correo Electronico" class="input-button-login">
+            <input type="email" placeholder="Confirmar Correo Electronico" class="input-button-login">
+            <input type="password" placeholder="Contraseña" class="input-button-login">
+            <input type="password" placeholder="Confirmar Contraseña" class="input-button-login">
+            <button type="submit" class="input-button-login" id="login-button">Crear Cuenta</button>
+            <a href="login.html"><button class="input-button-login" id="login-button">Iniciar Sesion</button></a>
+        </form>
     </main>
     <footer class="footer">
         <section class="elementos-footer">

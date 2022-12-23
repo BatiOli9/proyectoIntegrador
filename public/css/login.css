@@ -1,0 +1,35 @@
+.main-login {
+    position: relative;
+}
+
+.login-title {
+    text-align: center;
+    margin-top: 1%;
+    font-size: 2em;
+}
+
+.input-button-login {
+    width: 70%;
+    height: 40px;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+#login-button {
+    color: #fff;
+    background-color: #4e5054;
+    transition: 0.3s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #4287f5;
+    color: #111;
+}
+
+@media (max-width: 450px) {
+    .input-button-login {
+        margin-top: 5%;
+    }
+}

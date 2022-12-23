@@ -1,0 +1,169 @@
+/* Main */
+
+.main {
+    width: 100vw;
+    margin-top: 4%;
+}
+
+/* Productos destacados */
+
+.destacados {
+    width: 100%;
+    position: relative;
+}
+
+.destacados-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.productos-destacados {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.producto {
+    position: relative;
+    margin: 15px auto;
+    border-radius: 15px;
+    background-color: #ebebeb;
+    width: 70%;
+}
+
+.img-producto {
+    position: relative;
+    left: 15%;
+    width: 70%;
+    margin: 5%;
+    transition: 0.3s;
+}
+
+.img-producto:hover {
+    width: 80%;
+    left: 10%;
+}
+
+.nombre-producto {
+    text-align: center;
+    margin: 2%;
+}
+
+.precio-producto {
+    font-size: 1.2em;
+    position: relative;
+    left: 20%;
+    top: 5%;
+}
+
+#carrito-producto {
+    position: relative;
+    font-size: 1.2em;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    left: 70%;
+    bottom: 4%;
+    transition: 0.3s;
+    color: #111;
+}
+
+#carrito-producto:hover {
+    background-color: #4287f5;
+}
+
+/* Marcas destacadas */
+
+.marcas {
+    width: 100%;
+}
+
+.marcas-title {
+    margin-top: 2%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.marcas-sponsor {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.marca {
+    width: 70%;
+    background-color: #ebebeb;
+    position: relative;
+    margin: 15px auto;
+    border-radius: 15px;
+}
+
+.img-marca {
+    position: relative;
+    width: 70%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    transition: 0.3s;
+}
+
+.img-marca:hover {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.boton-marca {
+    width: 60%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 20%;
+    background-color: black;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.boton-marca:hover {
+    background-color: #4287f5;
+}
+
+.boton-marca:hover .a-marca{
+    color: #111;
+    font-weight: 600;
+}
+
+.a-marca {
+    color: #fff;
+}
+
+/* Media Queries */
+
+@media (min-width:450px) {
+    /* Navegacion para tablets */
+    .producto {
+        width: 35%;
+    }
+    .marca {
+        width: 40%;
+    }
+}
+
+@media (min-width:760px) {
+    /* Navegacion para computadora */
+    .producto {
+        width: 20%;
+    }
+    .destacados-title {
+        margin-bottom: 1%;
+    }
+    .marca {
+        width: 20%;
+    }
+}

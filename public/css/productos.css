@@ -1,0 +1,133 @@
+.productos-main {
+    width: 100vw;
+    position: relative;
+}
+
+.producto {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    margin-top: 3%;
+}
+
+.img-producto {
+    width: 100%;
+}
+
+.titulo-producto {
+    font-size: 1.4em;
+    margin-bottom: 3%;
+}
+
+.codigo-producto {
+    margin-bottom: 2%;
+    font-size: 0.9em;
+}
+
+.precio-titulo {
+    font-size: 1.1em;
+}
+
+.precio-producto {
+    font-size: 1.4em;
+    margin-bottom: 2%;
+}
+
+.agregar-producto {
+    width: 90%;
+    margin-left: 5%;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #4287f5;
+    color: #111;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.info-titulo {
+    font-size: 1.3em;
+}
+
+.garantia-titulo {
+    margin-top: 2%;
+    font-size: 1.3em;
+}
+
+.envios-titulo {
+    margin-top: 2%;
+    font-size: 1.3em;
+}
+
+hr {
+    visibility: visible;
+}
+
+@media (min-width: 760px) {
+    .img-producto {
+        width: 30%;
+    }
+    hr {
+        visibility: hidden;
+    }
+    .titulo-producto {
+        position: absolute;
+        bottom: 90%;
+        margin-left: 40%;
+        font-size: 1.6em;
+    }
+    .codigo-producto {
+        position: absolute;
+        bottom: 87%;
+        margin-left: 40%;
+        font-size: 0.9em;
+    }
+    .precio-titulo {
+        position: absolute;
+        bottom: 85%;
+        margin-left: 40%;
+        font-size: 1.2em;
+    }
+    .precio-producto {
+        position: absolute;
+        bottom: 74%;
+        margin-left: 40%;
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    .agregar-producto {
+        position: absolute;
+        width: 50%;
+        bottom: 30%;
+        margin-left: 40%;
+        transition: 0.4s;
+    }
+    .agregar-producto:hover {
+        background-color: #111;
+        color: #fff;
+    }
+    .garantia-titulo {
+        position: absolute;
+        bottom: 70%;
+        margin-left: 40%;
+    }
+    .garantia-info {
+        position: absolute;
+        bottom: 67%;
+        margin-left: 40%;
+    }
+    .envios-titulo {
+        position: absolute;
+        bottom: 57%;
+        margin-left: 40%;
+    }
+    .envios-info {
+        position: absolute;
+        bottom: 54%;
+        margin-left: 40%;
+    }
+    .info-titulo {
+        margin-top: 1%;
+    }
+}
