@@ -46,6 +46,23 @@
     cursor: pointer;
 }
 
+.crear-producto {
+    width: 90%;
+    margin-left: 5%;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #111;
+    color: #fff;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.crear-producto-a {
+    color: #fff;
+}
+
 .info-titulo {
     font-size: 1.3em;
 }
@@ -103,9 +120,23 @@ hr {
         margin-left: 40%;
         transition: 0.4s;
     }
+    .crear-producto {
+        position: absolute;
+        width: 50%;
+        bottom: 20%;
+        margin-left: 40%;
+        transition: 0.4s;
+    }
     .agregar-producto:hover {
         background-color: #111;
         color: #fff;
+    }
+    .crear-producto:hover {
+        background-color: #fff;
+        color: #111;
+    }
+    .crear-producto:hover .crear-producto-a {
+        color: #111;
     }
     .garantia-titulo {
         position: absolute;

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "nombre": "Nvidia GeForce RTX 3070 EVGA",
+        "precio": 150000,
+        "codigo": "P/N 3456-0934-KL",
+        "garantia": "2 años",
+        "descripcion": "Las EVGA GeForce RTX™ Serie 30 FTW3 diferencian a EVGA del resto de las opciones. Con el rango completo de la tecnología EVGA iCX3, LEDs ARGB, un ancho de 2.75 slots (Con bracket de 2 slots), 3 fans HDB asíncronos, y el sistema de alimentación más fuerte de la línea EVGA Serie 30 regular, estas gráficas marcan la nueva vara de rendimiento y refrigeración.",
+        "stock": true,
+        "img": "evga-3070.png"
+    },
+    {
+        "id": 1,
+        "nombre": "SSD NVME WD 240GB Green",
+        "precio": 12000,
+        "codigo": "DIS1073",
+        "garantia": "1 año",
+        "descripcion": "El WD Green SN350 WDS240G2G0C está adaptado para que puedas acceder de forma rápida a tus documentos digitales gracias a su tecnología en estado sólido.",
+        "stock": true,
+        "img": "nvme-240gb-WD.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Corsair HS70 PRO Black",
+        "precio": 30000,
+        "codigo": "AUB095",
+        "garantia": "1 año",
+        "descripcion": "Los transductores de neodimio de 50 mm ajustados a medida y de alta calidad ofrecen el alcance suficiente para oír todo lo necesario en el campo de batalla. Active Windows Sonic en PC para disfrutar de una experiencia de audio inmersivo en 360° que lo trasladará directamente al juego.",
+        "stock": true,
+        "img": "auriculares-hs70-corsair.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Monitor Asus 144hz Curso 1MS",
+        "precio": 60000,
+        "codigo": "MON562",
+        "garantia": "2 años",
+        "descripcion": "Los transductores de neodimio de 50 mm ajustados a medida y de alta calidad ofrecen el alcance suficiente para oír todo lo necesario en el campo de batalla. Active Windows Sonic en PC para disfrutar de una experiencia de audio inmersivo en 360° que lo trasladará directamente al juego.",
+        "stock": true,
+        "img": "monitor-asus-144hz.png"
+    }
+]

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Gaming</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/5297b1b7bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main class="productos-main">
+        <section class="producto">
+            <img src="/images/<%= producto.img %>" class="img-producto">
+            <hr>
+            <h3 class="titulo-producto"><%= producto.nombre %></h3>
+            <p class="codigo-producto">Codigo del producto: <%= producto.codigo %></p>
+            <h4 class="precio-titulo">Precio:</h4>
+            <p class="precio-producto">$<%= producto.precio %></p>
+            <button class="agregar-producto">Sumar al carrito</button>
+            <button class="crear-producto"><a class="crear-producto-a"href="../crear-producto">Agregar un producto</a></button>
+            <hr>
+            <h4 class="info-titulo">Informacion del producto:</h4>
+            <p class="info-producto"><%= producto.descripcion %></p>
+            <h4 class="garantia-titulo">Garantia:</h4>
+            <p class="garantia-info">Este producto cuenta con <%= producto.garantia %> de garantia</p>
+            <h4 class="envios-titulo">Envios:</h4>
+            <p class="envios-info">Envios a todo el país</p>
+        </section>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

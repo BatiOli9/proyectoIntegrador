@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Gaming</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/crear-producto.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/5297b1b7bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main class="main">
+        <form action="/products/create" method="POST">
+            <div class="div-formulario">
+                <label for="nombre" class="label-formulario">Nombre del producto:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ej. Teclado Mecanico Razer" class="input-formulario">
+            </div>
+            <div class="div-formulario">
+                <label for="codigo" class="label-formulario">Codigo del producto:</label>
+                <input type="text" name="codigo" id="codigo" placeholder="Ej. DIS1073" class="input-formulario">
+            </div>
+            <div class="div-formulario">
+                <label for="precio" class="label-formulario">Precio del producto:</label>
+                <input type="number" name="precio" id="precio" placeholder="Ej. $15000" class="input-formulario">
+            </div>
+            <div class="div-formulario">
+                <label for="garantia" class="label-formulario">Garantia del producto:</label>
+                <input type="text" name="garantia" id="garantia" placeholder="Ej. 1 año" class="input-formulario">
+            </div>
+            <div class="div-formulario">
+                <label for="descripcion" class="label-formulario">Descripcion del producto:</label>
+                <input type="text" name="descripcion" id="descripcion" class="input-formulario">
+            </div>
+            <button type="submit" class="boton-formulario">Crear producto</button>
+        </form>
+    </main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
