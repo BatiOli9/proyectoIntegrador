@@ -14,8 +14,24 @@ const controller = {
         })
         res.render('productoDetalle', {producto: productoFiltrado});
     },
-    crearProducto: (req, res) => {
-        res.render('crear-producto');
+        crearProducto: (req, res) => {
+            res.render("crear-producto")
+    },
+    crearProductoProcesar: (req, res) => {
+        const productos = JSON.parse(fs.readFileSync(productosPath, 'utf-8'));
+
+        let productoNuevo = {
+            id: productos[productos.length - 1].id + 1,
+            nombre: req.body.nombre,
+            codigo: req.body.codigo,
+            precio: req.body.precio,
+            garantia: req.body.garantia,
+            descripcion: req.body.descripcion
+        }
+
+        productos.push(productoNuevo)
+        fs.writeFileSync(productosPath, JSON.stringify(productos, null, " "));
+        res.redirect("/crear-producto");
     }
 }
 module.exports = controller;

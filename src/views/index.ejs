@@ -23,7 +23,7 @@
                         <img src="/images/<%= producto.img %>" class="img-producto">
                         <h4 class="nombre-producto"><%= producto.nombre %></h4>
                         <p class="precio-producto">$<%= producto.precio %></p>
-                        <a href="productoDetalle/<%= producto.id %>"><i class="fa-solid fa-cart-plus" id="carrito-producto"></i></a>
+                        <a href="/productos/productoDetalle/<%= producto.id %>"><i class="fa-solid fa-cart-plus" id="carrito-producto"></i></a>
                     </article>
                 <% }) %>
             </section>

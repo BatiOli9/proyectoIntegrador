@@ -22,5 +22,6 @@ app.listen(3002, () => {
 });
 
 app.use('/', indexRoutes);
-app.use('/', productosRoutes);
+app.use('/productos', productosRoutes);
 app.use('/', carritoRoute);
+// Agregar el de usuarios
