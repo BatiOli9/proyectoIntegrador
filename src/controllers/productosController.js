@@ -31,7 +31,15 @@ const controller = {
 
         productos.push(productoNuevo)
         fs.writeFileSync(productosPath, JSON.stringify(productos, null, " "));
-        res.redirect("/crear-producto");
+        res.redirect("/");
+    },
+    productos: (req, res) => {
+        const productos = JSON.parse(fs.readFileSync(productosPath, 'utf-8'));
+        let productosFiltrados = productos.filter( producto => {
+            return producto.stock == true;
+        })
+
+        res.render('productos', {productos: productosFiltrados});
     }
 }
 module.exports = controller;

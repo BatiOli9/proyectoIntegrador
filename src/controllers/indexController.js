@@ -9,7 +9,7 @@ const controller = {
         const productosLeidos = JSON.parse(fs.readFileSync(productosPath, 'utf-8'));
 
         let productosDestacadosFiltrados = productosLeidos.filter( producto => {
-            return producto.stock == true;
+            return producto.destacado == true;
         })
 
         return res.render('index', {productosDestacados: productosDestacadosFiltrados});

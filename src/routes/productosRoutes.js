@@ -10,5 +10,8 @@ router.get('/productoDetalle/:id/', productosController.productoDetalle);
 router.post('/crear-producto', productosController.crearProductoProcesar);
 router.get('/crear-producto', productosController.crearProducto)
 
+// Todos los productos
+router.get('/productos', productosController.productos)
+
 
 module.exports = router;
