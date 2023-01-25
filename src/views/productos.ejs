@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Gaming</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/todosLosProductos.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <script src="https://kit.fontawesome.com/5297b1b7bd.js" crossorigin="anonymous"></script>
+</head>
+    <%- include('partials/header.ejs') %>
+    <main class="main-productos">
+        <h3 class="todos-titulo">Todos los productos:</h3>
+        <section class="productos">
+        <% productos.forEach(productos => { %>
+            <article class="producto">
+                <a href="/productos/productoDetalle/<%= productos.id %>"><img src="/images/<%= productos.img %>" class="img-producto"></a>
+                <h4 class="nombre-producto"><%= productos.nombre %></h4>
+                <p class="precio-producto">$<%= productos.precio %></p>
+            </article>
+        <% }) %>
+        </section>
+    </main>
+    <%- include('partials/footer.ejs') %>

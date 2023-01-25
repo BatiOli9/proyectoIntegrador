@@ -23,6 +23,10 @@
             <p class="precio-producto">$<%= producto.precio %></p>
             <button class="agregar-producto">Sumar al carrito</button>
             <button class="crear-producto"><a class="crear-producto-a" href="/productos/crear-producto">Agregar un producto</a></button>
+            <button class="editar-producto"><a href="/productos/editar-producto/<%= producto.id %>" class="editar-producto-a">Editar Producto</a></button>
+            <form action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                <button class="borrar-producto">Borrar Producto</button>
+            </form>
             <hr>
             <h4 class="info-titulo">Informacion del producto:</h4>
             <p class="info-producto"><%= producto.descripcion %></p>

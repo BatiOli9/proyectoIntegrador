@@ -14,31 +14,31 @@
 <body>
     <%- include('partials/header.ejs') %>
     <main class="main">
-        <form action="/productos/crear-producto" method="POST">
+        <form action="/productos/editar-producto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <div class="div-formulario">
                 <label for="nombre" class="label-formulario">Nombre del producto:</label>
                 <br>
-                <input type="text" name="nombre" id="nombre" placeholder="Ej. Teclado Mecanico Razer" class="input-formulario">
+                <input type="text" value="<%= producto.nombre %>" name="nombre" id="nombre" placeholder="Ej. Teclado Mecanico Razer" class="input-formulario">
             </div>
             <div class="div-formulario">
                 <label for="codigo" class="label-formulario">Codigo del producto:</label>
                 <br>
-                <input type="text" name="codigo" id="codigo" placeholder="Ej. DIS1073" class="input-formulario">
+                <input type="text" value="<%= producto.codigo %>" name="codigo" id="codigo" placeholder="Ej. DIS1073" class="input-formulario">
             </div>
             <div class="div-formulario">
                 <label for="precio" class="label-formulario">Precio del producto:</label>
                 <br>
-                <input type="number" name="precio" id="precio" placeholder="Ej. $15000" class="input-formulario">
+                <input type="number" value="<%= producto.precio %>" name="precio" id="precio" placeholder="Ej. $15000" class="input-formulario">
             </div>
             <div class="div-formulario">
                 <label for="garantia" class="label-formulario">Garantia del producto:</label>
                 <br>
-                <input type="text" name="garantia" id="garantia" placeholder="Ej. 1 año" class="input-formulario">
+                <input type="text" name="garantia" value="<%= producto.garantia %>" id="garantia" placeholder="Ej. 1 año" class="input-formulario">
             </div>
             <div class="div-formulario">
                 <label for="descripcion" class="label-formulario">Descripcion del producto:</label>
                 <br>
-                <input type="text" name="descripcion" id="descripcion" class="input-formulario">
+                <input type="text" name="descripcion" value="<%= producto.descripcion %>" id="descripcion" class="input-formulario">
             </div>
             <button type="submit" class="boton-formulario">Crear producto</button>
         </form>

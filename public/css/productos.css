@@ -59,8 +59,42 @@
     cursor: pointer;
 }
 
+.editar-producto {
+    width: 90%;
+    margin-left: 5%;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #4287f5;
+    color: #fff;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.borrar-producto {
+    width: 90%;
+    margin-left: 5%;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #f72828;
+    color: #fff;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.editar-producto-a {
+    color: #111;
+}
+
 .crear-producto-a {
     color: #fff;
+}
+
+.borrar-producto-a {
+    color: #111;
 }
 
 .info-titulo {
@@ -127,16 +161,40 @@ hr {
         margin-left: 40%;
         transition: 0.4s;
     }
+    .editar-producto {
+        position: absolute;
+        width: 50%;
+        bottom: 10%;
+        margin-left: 40%;
+        transition: 0.4s;
+    }
+    .borrar-producto {
+        position: absolute;
+        width: 50%;
+        margin-left: 40%;
+        transition: 0.4s;
+    }
+    .borrar-producto:hover {
+        background-color: #111;
+    }
+    .borrar-producto:hover .borrar-producto-a {
+        color: #fff;
+    }
     .agregar-producto:hover {
         background-color: #111;
         color: #fff;
     }
     .crear-producto:hover {
         background-color: #fff;
-        color: #111;
+    }
+    .editar-producto:hover {
+        background-color: #111;
     }
     .crear-producto:hover .crear-producto-a {
         color: #111;
+    }
+    .editar-producto:hover .editar-producto-a {
+        color: #fff;
     }
     .garantia-titulo {
         position: absolute;
