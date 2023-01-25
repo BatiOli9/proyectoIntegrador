@@ -19,7 +19,7 @@ const controller = {
     },
     crearProductoProcesar: (req, res) => {
         const productos = JSON.parse(fs.readFileSync(productosPath, 'utf-8'));
-
+        console.log(req.body);
         let productoNuevo = {
             id: productos[productos.length - 1].id + 1,
             nombre: req.body.nombre,
@@ -31,7 +31,7 @@ const controller = {
 
         productos.push(productoNuevo)
         fs.writeFileSync(productosPath, JSON.stringify(productos, null, " "));
-        res.redirect("/crear-producto");
+        res.redirect("/productos/crear-producto");
     }
 }
 module.exports = controller;

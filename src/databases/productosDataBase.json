@@ -62,5 +62,29 @@
  },
  {
   "id": 6
+ },
+ {
+  "id": 7,
+  "nombre": "d",
+  "codigo": "d",
+  "precio": "12",
+  "garantia": "d",
+  "descripcion": "d"
+ },
+ {
+  "id": 8,
+  "nombre": "d",
+  "codigo": "d",
+  "precio": "12",
+  "garantia": "d",
+  "descripcion": "d"
+ },
+ {
+  "id": 9,
+  "nombre": "d",
+  "codigo": "d",
+  "precio": "34",
+  "garantia": "d",
+  "descripcion": "d"
  }
 ]
