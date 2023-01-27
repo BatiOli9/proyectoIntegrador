@@ -72,7 +72,7 @@ const controller = {
             return producto.id == id
         })
 
-        productos[indice] = productoEditado;
+        productos[indice] = {...productos[indice], ...productoEditado};
 
         fs.writeFileSync(productosPath, JSON.stringify(productos, null, " "));
         res.redirect("/");
