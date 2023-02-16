@@ -25,7 +25,8 @@ const controller = {
             codigo: req.body.codigo,
             precio: req.body.precio,
             garantia: req.body.garantia,
-            descripcion: req.body.descripcion
+            descripcion: req.body.descripcion,
+            img: req.file ? req.file.filename: Date.now() + "producto"
         }
 
         productos.push(productoNuevo)
