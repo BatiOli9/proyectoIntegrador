@@ -1,0 +1,14 @@
+[
+    {
+        "email": "fullgaming@gmail.com",
+        "password": "Fullgaming123",
+        "username": "FullGaming",
+        "img": "fullgaming.jpg"
+    },
+    {
+        "email": "juanperez@gmail.com",
+        "password": "Juansito123",
+        "username": "Pancho123",
+        "img": "juan.jpg"
+    }
+]

@@ -26,7 +26,8 @@ const controller = {
             precio: req.body.precio,
             garantia: req.body.garantia,
             descripcion: req.body.descripcion,
-            img: req.file ? req.file.filename: Date.now() + "producto"
+            img: req.file ? req.file.filename: Date.now() + "producto",
+            stock: true
         }
 
         productos.push(productoNuevo)
@@ -66,7 +67,9 @@ const controller = {
             descuento: req.body.descuento,
             codigo: req.body.codigo,
             garantia: req.body.garantia,
-            descripcion: req.body.descripcion
+            descripcion: req.body.descripcion,
+            img: req.file ? req.file.filename : productoAnterior.image,
+            stock: true
         }
 
         let indice = productos.findIndex(producto => {

@@ -2,6 +2,7 @@ let express = require('express');
 const { productos } = require('../controllers/productosController');
 const router = express.Router();
 const multer = require('multer');
+const path = require('path');
 
 const productosController = require ('../controllers/productosController')
 
@@ -20,7 +21,7 @@ const upload = multer({storage: storage});
 router.get('/productoDetalle/:id/', productosController.productoDetalle);
 
 // Crear producto
-router.post('/crear-producto', upload.single("productImage"), productosController.crearProductoProcesar);
+router.post('/crear-producto', upload.single("img"), productosController.crearProductoProcesar);
 router.get('/crear-producto', productosController.crearProducto)
 
 // Todos los productos
@@ -29,7 +30,7 @@ router.get('/productos', productosController.productos)
 // Editar Productos
 
 router.get('/editar-producto/:id', productosController.editarProducto);
-router.put('/editar-producto/:id', upload.single("productImage"), productosController.editarProductoProcesar);
+router.put('/editar-producto/:id', upload.single("img"), productosController.editarProductoProcesar);
 
 // Borrar Productos
 

@@ -57,13 +57,12 @@
  {
   "id": 6,
   "nombre": "Microfono HyperX QuadCast",
-  "precio": 54000,
+  "precio": "54000",
   "codigo": "HYX345",
   "garantia": "2 años",
   "descripcion": "El teclado mas rapido del mundo, con switches ajustables y un tacto muy coomodo. Utilizado por los mejores jugadores de esports del mundo.",
-  "stock": true,
-  "destacado": false,
-  "img": "hyperx-quadcast.png"
+  "img": "hyperx-quadcast.png",
+  "stock": true
  },
  {
   "id": 7,
