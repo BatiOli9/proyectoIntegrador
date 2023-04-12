@@ -13,7 +13,7 @@
 </head>
 <body>
     <%- include('partials/header.ejs') %>
-    <main class="main">
+    <main class="main"> 
         <form action="/productos/editar-producto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <div class="div-formulario">
                 <label for="nombre" class="label-formulario">Nombre del producto:</label>
@@ -34,6 +34,18 @@
                 <label for="garantia" class="label-formulario">Garantia del producto:</label>
                 <br>
                 <input type="text" name="garantia" value="<%= producto.garantia %>" id="garantia" placeholder="Ej. 1 año" class="input-formulario">
+            </div>
+            <div class="div-formulario">
+                <label for="img" class="label-formulario">Tipo de producto:</label>
+                <br>
+                <select name="tipo" id="tipo" class="input-formulario">
+                    <option disabled>Selecciona una opcion</option>
+                    <% tipos.forEach(tipo => { %>
+                        <option <% if(producto.id == tipo.id)  { %>
+                            selected
+                        <% }  %> value="<%= tipo.id %>"><%= tipo.tipo %></option>
+                        <% }) %>
+                </select>
             </div>
             <div class="div-formulario">
                 <label for="descripcion" class="label-formulario">Descripcion del producto:</label>

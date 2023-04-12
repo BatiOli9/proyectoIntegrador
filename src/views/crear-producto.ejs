@@ -36,6 +36,16 @@
                 <input type="text" name="garantia" id="garantia" placeholder="Ej. 1 año" class="input-formulario">
             </div>
             <div class="div-formulario">
+                <label for="img" class="label-formulario">Tipo de producto:</label>
+                <br>
+                <select name="tipo" id="tipo" class="input-formulario">
+                    <option selected disabled>Selecciona una opcion</option>
+                    <% tipos.forEach(tipo => { %>
+                        <option value="<%= tipo.id %>"><%= tipo.tipo %></option>
+                        <% }) %>
+                </select>
+            </div>
+            <div class="div-formulario">
                 <label for="descripcion" class="label-formulario">Descripcion del producto:</label>
                 <br>
                 <input type="text" name="descripcion" id="descripcion" class="input-formulario">
