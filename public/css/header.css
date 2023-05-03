@@ -159,7 +159,38 @@
     position: relative;
     bottom: 80%;
     text-align: center;
+    bottom: 50px;
 }
+
+.burger-button {
+    padding: 4px;
+}
+
+.burger-nav {
+    bottom: 80%;
+    position: relative;
+    z-index: 3;
+    background-color: #4287f5;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.burger-nav.activo {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.li-burger {
+    position: relative;
+    padding: 2%;
+    text-align: center;
+}
+
+.li-burger-a {
+    color: #111;
+}
+
+
 
 @keyframes cambio {
     0% {margin-left: 0;}
@@ -219,8 +250,11 @@
 
 @media (min-width: 760px){
     /* Navegacion para computadora */
-    #menu-hamburguesa {
-        visibility: hidden;
+    .burger-nav {
+        display: none;
+    }
+    .burger-button {
+        display: none;
     }
     .objetos-header-bottom {
         visibility: visible;

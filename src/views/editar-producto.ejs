@@ -14,7 +14,14 @@
 <body>
     <%- include('partials/header.ejs') %>
     <main class="main"> 
-        <form action="/productos/editar-producto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+        <form action="/productos/editar-producto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form"> 
+            <% if (locals.errores) { %>
+                <% errores.forEach(error => { %>
+                <p class="error"><i class="fa-solid fa-circle-exclamation"></i> <%= error.msg %></p>
+            <% })} %>
+            <ul class="errores">
+
+            </ul>
             <div class="div-formulario">
                 <label for="nombre" class="label-formulario">Nombre del producto:</label>
                 <br>
@@ -50,16 +57,17 @@
             <div class="div-formulario">
                 <label for="descripcion" class="label-formulario">Descripcion del producto:</label>
                 <br>
-                <input type="text" name="descripcion" value="<%= producto.descripcion %>" id="descripcion" class="input-formulario">
+                <input type="text" name="description" value="<%= producto.descripcion %>" id="descripcion" class="input-formulario descripcion-input">
             </div>
             <div class="div-formulario">
                 <label for="img" class="label-formulario">Imagen del producto:</label>
                 <br>
                 <input type="file" name="img" id="descripcion" class="input-formulario">
             </div>
-            <button type="submit" class="boton-formulario">Crear producto</button>
+            <button type="submit" class="boton-formulario">Editar producto</button>
         </form>
     </main>
     <%- include('partials/footer.ejs') %>
+    <script src="/js/editarProductoValidaciones.js"></script>
 </body>
 </html>

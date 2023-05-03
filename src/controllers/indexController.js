@@ -9,7 +9,6 @@ const controller = {
     index: (req, res) => {
         db.Productos.findAll( { where: { destacado : 1}, raw: true } )
             .then(function (productos) {
-                console.log(productos);
                 res.render("index", {productos})
             })
     },

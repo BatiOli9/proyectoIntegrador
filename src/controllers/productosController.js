@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const db = require('../database/models')
+const db = require('../database/models');
+const { validationResult } = require('express-validator');
+/* const { error } = require('console'); */
 
 // Vamos a traer y a guardar el objeto literal donde guardamos toda la informacion de los productos
 const productosPath = path.join(__dirname, '../databases/productosDataBase.json');
@@ -21,19 +23,31 @@ const controller = {
     },
     crearProductoProcesar: (req, res) => {
 
-        db.Productos.create({
-            nombre: req.body.nombre,
-            codigo: req.body.codigo,
-            precio: req.body.precio,
-            garantia: req.body.garantia,
-            descripcion: req.body.descripcion,
-            img: req.file ? req.file.filename : Date.now() + "producto",
-            stock: true,
-            tipo_id: req.body.tipo
-        })
-            .then(product => {
-                res.redirect("/productos/productos")
+        let errores = validationResult(req);
+
+        if (errores.isEmpty()){
+            db.Productos.create({
+                nombre: req.body.nombre,
+                codigo: req.body.codigo,
+                precio: req.body.precio,
+                garantia: req.body.garantia,
+                descripcion: req.body.descripcion,
+                img: req.file ? req.file.filename : Date.now() + "producto",
+                stock: true,
+                tipo_id: req.body.tipo
             })
+
+            .then(function (){
+                res.redirect('/productos/productos')
+            });
+
+        }
+        else {
+            db.Tipos.findAll()
+            .then(function (tipos) {
+                res.render("crear-producto", { tipos, errores: errores.array() });
+            })
+        }
     },
     productos: (req, res) => {
         db.Productos.findAll()
@@ -51,7 +65,11 @@ const controller = {
         }
     },
     editarProductoProcesar: (req, res) => {
-        db.Productos.findByPk(req.params.id)
+
+        let errores = validationResult(req);
+
+        if (errores.isEmpty()){
+            db.Productos.findByPk(req.params.id)
             .then(productoViejo => {
                 db.Productos.update({
                     nombre: req.body.nombre,
@@ -71,6 +89,15 @@ const controller = {
             .then(product => {
                 res.redirect('/productos/productos')
             })
+        } 
+        else {
+                db.Tipos.findAll()
+                    .then(function (tipos) {
+                        let producto = req.body;
+                        producto.id = req.params.id;
+                        res.render("editar-producto", {errores: errores.array(), producto, tipos });
+                    })
+            }
     },
     eliminarProducto: (req, res) => {
         db.Productos.destroy({

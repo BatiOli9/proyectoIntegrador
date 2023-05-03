@@ -27,6 +27,13 @@
     font-weight: 600;
 }
 
+.error {
+    position: relative;
+    left: 15%;
+    padding-top: 8px;
+    color: #f52811;
+}
+
 @media (min-width: 760px){
     .input-formulario {
         width: 40%;
